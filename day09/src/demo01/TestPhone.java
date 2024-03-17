@@ -1,4 +1,4 @@
-package damo01;
+package demo01;
 
 public class TestPhone {
     public static void main(String[] args) {
