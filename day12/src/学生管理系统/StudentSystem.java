@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentSystem {
-    public static void main(String[] args) {
+    public static void StudentSystemControl() {
         System.out.println("--------------------");
 
         ArrayList<Students> list=new ArrayList<>();
