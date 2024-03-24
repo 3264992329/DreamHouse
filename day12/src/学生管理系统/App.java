@@ -2,6 +2,7 @@ package 学生管理系统;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 
 import static 学生管理系统.StudentSystem.StudentSystemControl;
@@ -116,7 +117,38 @@ public class App {
                 }
 
                 //忘记密码----------------------------------------------
-                case 3->forGot();
+                case 3->{
+                    System.out.println("输入你的账户:");
+                    String usernumber=sc.next();
+                    System.out.println("输入你的身份证号:");
+                    String personid=sc.next();
+                    System.out.println("输入你注册时的手机号:");
+                    String phonenumber=sc.next();
+
+                    //验证码校验
+                    int i=-1;
+                    loop6:while (true){
+                        System.out.println("输入验证码:");
+
+                        String SCzym=zymResult();
+                        System.out.println("验证码为:"+SCzym);
+                        String zym0= sc.next();
+
+                        if (zym0.equals(SCzym)){
+                            //i为负数则输入验证信息有错误
+                            i=forGot(usernumber,personid,phonenumber,list);
+                            break loop6;
+                        }else {
+                            System.out.println("验证码输入错误!");
+                        }
+                    }
+
+                    if (i>=0){
+                        System.out.println("请输入需要修改的密码:");
+                        String password= sc.next();
+                        xg(password,i,list);
+                    }
+                }
 
                 //其他-------------------------------------------------
                 default -> {
@@ -147,11 +179,44 @@ public class App {
 
     //注册--------------------------------------------------------
     public static void zhuCe(User us1,String remakePassword,ArrayList<User> list) {
-
         list.add(us1);
         System.out.println("注册成功!");
     }
-    public static void forGot() {
-        System.out.println("找回成功!");
+
+    //找回密码信息校验
+    public static int forGot(String usernumber,String personid,String phonenumber,ArrayList<User> list) {
+        for (int i = 0; i < list.size(); i++) {
+            User us=list.get(i);
+            //先判断验证信息是否正确
+            if (us.getUserName().equals(usernumber)){
+                if (us.getPersonId().equals(personid)&&us.getPhoneNumber().equals(phonenumber)){
+                    return i;
+                }
+            }
+        }
+        System.out.println("验证信息有误,找回失败!");
+        return -1;
+    }
+
+    //验证码---------------------------------------------------------
+    public static String zymResult() {
+        Random rd=new Random();
+        String[] st={"l","o","a","1","B","2","c","3","D","5","u","i","t","e","q","n","c","5","6","7","8","9","C","V","B","F"};
+
+        StringBuilder zym= new StringBuilder();
+        for (int i = 0; i < 6; i++) {
+            int a= rd.nextInt(26);
+            zym.append(st[a]);
+        }
+
+        return zym.toString();
+    }
+
+    //找回密码,并修改密码----------------------------------------------------------
+    public static void xg(String password,int i,ArrayList<User> list) {
+        list.get(i).setPassWord(password);
+        System.out.println("密码找回成功,密码已修改!");
     }
 }
+
+
