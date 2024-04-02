@@ -21,7 +21,15 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     //用于记录空白方块的地址值
     int x;
     int y;
+    //记录步数
     int step=0;
+    //0是动物,1是女孩,默认动物
+    int select=0;
+    //第几种图片,默认1
+    int sum=1;
+    Random rd=new Random();
+    String girlPath="PuzzleGame\\image\\girl\\girl";
+    String animalPath="PuzzleGame\\image\\animal\\animal";
 
     //创建选项下条目
     JMenuItem replayItem=new JMenuItem("重新开始游戏");
@@ -85,11 +93,19 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 int n=number[i][j];
-                JLabel jLabel=new JLabel(new ImageIcon("PuzzleGame\\image\\animal\\animal3\\"+n+".jpg"));
-                jLabel.setBounds(105*j+35,105*i+108,115,125);
-                //设置图片边框
-                //jLabel.setBorder(new BevelBorder(BevelBorder.LOWERED));
-                this.getContentPane().add(jLabel);
+                if (select == 0) {
+                    JLabel jLabel=new JLabel(new ImageIcon(animalPath+sum+"\\"+n+".jpg"));
+                    jLabel.setBounds(105*j+35,105*i+108,115,125);
+                    //设置图片边框
+                    //jLabel.setBorder(new BevelBorder(BevelBorder.LOWERED));
+                    this.getContentPane().add(jLabel);
+                } else if (select==1) {
+                    JLabel jLabel=new JLabel(new ImageIcon(girlPath+sum+"\\"+n+".jpg"));
+                    jLabel.setBounds(105*j+35,105*i+108,115,125);
+                    //设置图片边框
+                    //jLabel.setBorder(new BevelBorder(BevelBorder.LOWERED));
+                    this.getContentPane().add(jLabel);
+                }
             }
         }
         //添加背景
@@ -245,6 +261,8 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         if (source==replayItem){
             System.out.println("重新开始游戏");
             step=0;
+            select=rd.nextInt(2);
+            sum=rd.nextInt(8)+1;
             initData();
             initImage();
         } else if (source==reLoginItem) {
