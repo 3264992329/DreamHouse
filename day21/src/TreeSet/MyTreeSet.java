@@ -1,5 +1,6 @@
 package TreeSet;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -32,5 +33,22 @@ public class MyTreeSet {
         ts1.add(st3);
         //使用了comparable接口,重写了compareTo方法,按照年龄从小到大排序
         System.out.println(ts1);
+
+
+        //第二种方式,比较器排序
+        TreeSet<String> ts2=new TreeSet<>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                int i=o1.length()-o2.length();
+                i=i==0?o1.compareTo(o2):i;
+                return i;
+            }
+        });
+
+        ts2.add("a");
+        ts2.add("bbsdfop");
+        ts2.add("adcccaa");
+        ts2.add("ddshgd");
+        System.out.println(ts2);
     }
 }
