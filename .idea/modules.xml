@@ -26,6 +26,7 @@
       <module fileurl="file://$PROJECT_DIR$/day25/day25.iml" filepath="$PROJECT_DIR$/day25/day25.iml" />
       <module fileurl="file://$PROJECT_DIR$/day26-stream/day26-stream.iml" filepath="$PROJECT_DIR$/day26-stream/day26-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/day27-methodYinYong/day27-methodYinYong.iml" filepath="$PROJECT_DIR$/day27-methodYinYong/day27-methodYinYong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day28-error/day28-error.iml" filepath="$PROJECT_DIR$/day28-error/day28-error.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaDM.iml" filepath="$PROJECT_DIR$/javaDM.iml" />
     </modules>
   </component>
