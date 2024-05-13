@@ -1,13 +1,10 @@
 package myiotest1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -77,23 +74,48 @@ public class test1 {
         }
         System.out.println(girllist);
 
+        // 姓名-性别-男 构造最终假数据
+        ArrayList<String> endName= result(girllist,boylist,allFamilylist,50,70);
+        Collections.shuffle(endName);
+        System.out.println(endName);
+
+        //最后将假数据写到文件中
+        File file=new File("C:\\Users\\86187\\Desktop\\大学\\javaDM\\day32-IOExercise\\fakeName.txt");
+        BufferedWriter bw=new BufferedWriter(new FileWriter(file));
+        for (String string : endName) {
+            bw.write(string);
+            bw.newLine();//换行
+        }
+        bw.close();
+    }
+
+    private static ArrayList<String> result(ArrayList<String> girllist, ArrayList<String> boylist, ArrayList<String> allFamilylist,int girlsNumber,int boysNumber) {
         //拼接名字---------------------------------------------------------
         Random rd=new Random();
-        ArrayList<String> girlName=new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            String a=allFamilylist.get(rd.nextInt(allFamilylist.size()));
-            String b=girllist.get(rd.nextInt(girllist.size()));
-            girlName.add(a+b);
+        HashSet<String> allName=new HashSet<>();
+        //打乱数据
+        Collections.shuffle(girllist);
+        Collections.shuffle(boylist);
+        Collections.shuffle(allFamilylist);
+
+            for (int i1 = 0; i1 < girllist.size(); i1++) {
+                allName.add(allFamilylist.get(i1)+girllist.get(i1)+"-女");
+            }
+            //再次打乱数据
+        Collections.shuffle(allFamilylist);
+            for (int i1 = 0; i1 < boylist.size(); i1++) {
+                allName.add(allFamilylist.get(i1)+boylist.get(i1)+"-男");
+            }
+
+            //将数据转移到ArrayList<String>中
+        ArrayList<String> list=new ArrayList<>();
+        for (String s : allName) {
+            int age = rd.nextInt(18)+10;
+            list.add(s+"-"+age);
         }
-        System.out.println(girlName);
-        ArrayList<String> boyName=new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            String a=allFamilylist.get(rd.nextInt(allFamilylist.size()));
-            String b=boylist.get(rd.nextInt(boylist.size()));
-            boyName.add(a+b);
-        }
-        System.out.println(boyName);
+        return list;
     }
+
     //正则表达式过滤----------------------------------------------------------------------
     private static ArrayList<String> getData(String s, String filter ,int index) {
         ArrayList<String> list=new ArrayList<>();
