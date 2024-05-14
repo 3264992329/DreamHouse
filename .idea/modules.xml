@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/puzzlegame/PuzzleGame.iml" filepath="$PROJECT_DIR$/puzzlegame/PuzzleGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/day05/day05.iml" filepath="$PROJECT_DIR$/day05/day05.iml" />
       <module fileurl="file://$PROJECT_DIR$/day06/day06.iml" filepath="$PROJECT_DIR$/day06/day06.iml" />
       <module fileurl="file://$PROJECT_DIR$/day07/day07.iml" filepath="$PROJECT_DIR$/day07/day07.iml" />
@@ -31,7 +30,12 @@
       <module fileurl="file://$PROJECT_DIR$/day30-IO/day30-IO.iml" filepath="$PROJECT_DIR$/day30-IO/day30-IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/day31-IO-2/day31-IO-2.iml" filepath="$PROJECT_DIR$/day31-IO-2/day31-IO-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/day32-IOExercise/day32-IOExercise.iml" filepath="$PROJECT_DIR$/day32-IOExercise/day32-IOExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day33-Multi-threaded/day33-Multi-threaded.iml" filepath="$PROJECT_DIR$/day33-Multi-threaded/day33-Multi-threaded.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diary/diary/diary.iml" filepath="$PROJECT_DIR$/diary/diary/diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaDM.iml" filepath="$PROJECT_DIR$/javaDM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puzzlegame/puzzlegame.iml" filepath="$PROJECT_DIR$/puzzlegame/puzzlegame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puzzlegame1/puzzlegame1.iml" filepath="$PROJECT_DIR$/puzzlegame1/puzzlegame1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puzzlegame2/puzzlegame2.iml" filepath="$PROJECT_DIR$/puzzlegame2/puzzlegame2.iml" />
     </modules>
   </component>
 </project>
