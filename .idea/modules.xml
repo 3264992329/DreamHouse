@@ -31,6 +31,7 @@
       <module fileurl="file://$PROJECT_DIR$/day31-IO-2/day31-IO-2.iml" filepath="$PROJECT_DIR$/day31-IO-2/day31-IO-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/day32-IOExercise/day32-IOExercise.iml" filepath="$PROJECT_DIR$/day32-IOExercise/day32-IOExercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/day33-Multi-threaded/day33-Multi-threaded.iml" filepath="$PROJECT_DIR$/day33-Multi-threaded/day33-Multi-threaded.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day34-INetworkProgramming/day34-INetworkProgramming.iml" filepath="$PROJECT_DIR$/day34-INetworkProgramming/day34-INetworkProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/diary/diary/diary.iml" filepath="$PROJECT_DIR$/diary/diary/diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaDM.iml" filepath="$PROJECT_DIR$/javaDM.iml" />
       <module fileurl="file://$PROJECT_DIR$/puzzlegame/puzzlegame.iml" filepath="$PROJECT_DIR$/puzzlegame/puzzlegame.iml" />
