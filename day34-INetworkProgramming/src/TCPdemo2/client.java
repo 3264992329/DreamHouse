@@ -19,7 +19,7 @@ public class client {
             byte[] bytes = str.getBytes();
             os.write(bytes);
             //printWriter.println(str);
-            if (str.equals("886")){
+            if (string.equals("886")){
                 break;
             }
         }
