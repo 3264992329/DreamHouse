@@ -37,6 +37,7 @@
       <module fileurl="file://$PROJECT_DIR$/puzzlegame/puzzlegame.iml" filepath="$PROJECT_DIR$/puzzlegame/puzzlegame.iml" />
       <module fileurl="file://$PROJECT_DIR$/puzzlegame1/puzzlegame1.iml" filepath="$PROJECT_DIR$/puzzlegame1/puzzlegame1.iml" />
       <module fileurl="file://$PROJECT_DIR$/puzzlegame2/puzzlegame2.iml" filepath="$PROJECT_DIR$/puzzlegame2/puzzlegame2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sockethomework/sockethomework.iml" filepath="$PROJECT_DIR$/sockethomework/sockethomework.iml" />
     </modules>
   </component>
 </project>
